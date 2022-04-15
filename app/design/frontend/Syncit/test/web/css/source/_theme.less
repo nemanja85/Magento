@@ -1,0 +1,190 @@
+/**********   Variables  *******************/
+@color-dark: #101010;
+@color-gray-dark: #ccc;
+@color-gray-light: #DCDCDC;
+
+/**********   Buttons  *******************/
+@button__font-size: 18px;
+@button__font-weight: 300;
+@button__color: @color-dark;
+@button__background: @color-white;
+@button__border-radius: 0;
+@button__border: 1px solid @color-dark;
+@button__hover__color: @color-white;
+@button__hover__background: @color-dark;
+
+.read-more {
+    .pagebuilder-button-secondary {
+        background-color: @color-dark;
+        color: @color-white;
+
+        &:hover {
+            background-color: @color-white;
+            color: @color-dark; 
+        }
+    }
+  
+}
+
+
+/**********    Fonts   ******************/
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+/**********   Header   ******************/
+.page-header {
+    background-color: @color-gray-dark;
+}
+
+.nav-sections {
+    margin-bottom: 0; 
+}
+
+/***********   Navigation   **************/
+@navigation__background: @color-gray-light;
+
+/***********   MAIN  ********************/
+h1 {
+    margin-bottom: 0;
+}
+
+h1, h2 {
+    line-height: 67px;
+}
+
+button {
+    &.slick-prev {
+        display: none !important;
+    }
+    &.slick-next {
+        background: transparent !important;
+
+        &:before {
+            color:  @color-white;
+            font-size: 32px;
+            line-height: 35px;
+        }
+
+        &:hover {
+            &::before {
+                color: @color-white;
+            }  
+        }
+    }
+}
+
+.slick-dots {
+    position: relative;
+    top: -60px;
+
+    li button {
+        background: transparent;
+        border: 2px solid @color-white;
+    }
+
+    li {
+        &.slick-active button {
+            background: @color-white;
+        }
+    }
+}
+
+.products-items {
+    display: flex;
+    justify-content: space-between;
+
+    h2 {
+        margin-bottom: 0;
+    }
+
+    p {
+        position: relative;
+        top: 25px;
+    }
+}
+
+.divider {
+    position: relative;
+    top: -25px;
+}
+
+.opacity-dark {
+    padding-top: 175px;
+    opacity: 0.7;
+
+    h2 {
+        font-size: 32px;
+        line-height: 67px;
+        color: @color-white;
+    }
+}
+
+.accordion {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid @color-gray-light;
+
+    h4 {
+        font-size: 16px;
+        line-height: 25px;
+        letter-spacing: 0.8px;
+        font-weight: 600;
+    }
+
+    .icon {
+        position: relative;
+        top : 10px;
+        font-size: 30px;
+    }
+}
+
+.content {
+    padding-top: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid @color-gray-light;
+}
+
+/**********   Footer  *******************/
+.page-footer {
+    background-color: @color-dark;
+
+    .content {
+        border-bottom: 0;
+
+        .links a {
+            color: @color-white;
+
+            &:hover {
+                color: @color-white;
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+@copyright__background-color:  @color-gray-middle4;
+
+
+/************** Responsive ******************/
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+    .pagebuilder-poster-content {
+        padding-left: 75px;
+    }
+}
+
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
+    .pagebuilder-slide-wrapper {
+        background-position: center !important;
+    }
+    
+    .footer.content .links>li {
+        background: transparent;
+        border-top: 0;
+    }
+}
+
